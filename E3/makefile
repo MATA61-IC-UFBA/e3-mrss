@@ -3,6 +3,8 @@ install:
 
 compile:
 	./compile.sh
+run:
+	./run.sh
 
 test:
 	./run_tests.sh
