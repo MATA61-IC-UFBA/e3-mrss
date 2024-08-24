@@ -8,15 +8,18 @@ int yylval;
 %option yylineno
 
 SPACING    [\n\t\r]*
+
 ID         [a-zA-Z][a-zA-Z0-9_]{0,255}
 NUM        [0-9]+
-ARRAY      \[[0-9]+
+ARRAY      \[[([0-9]+|(\"[^\n]+\"|\"\")|(\'[^\n]+\'|\'\'))]+,[([0-9]+|(\"[^\n]+\"|\"\")|\'[^\n]\')]\] 
+BOOLEAN    (true|false)
+CHAR       \'[^\n]\'
+
 COMMENT    "//".*
 KEYWORD    (array|boolean|char|else|false|for|function|if|integer|print|return|string|true|void|while)
 SYMBOL_C   "<="|">="|"=="|"!="|"&&"|"||"
 SYMBOL     [+\-*/%!<>=:;,()[\]{}\\]
-CHAR       '([^\\']|\\[0abefnrtvdws\\\'])'
-STRING     (\"[^\n"]+\"|\"\")
+STRING     (\"[^\n]+\"|\"\")
 
 ERROR      .
  

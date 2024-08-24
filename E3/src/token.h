@@ -17,7 +17,7 @@ typedef enum {
         STRING,
         TRUE,
         VOID,
-WHILE, 
+        WHILE, 
         LTE,
         GTE,
         EQU,
