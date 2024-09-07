@@ -44,7 +44,7 @@ ERROR      .
 {COMMENT}         { }
 {SPACING}         { }
 
-{INT}+         { yylval = atoi(yytext); return NUM; }
+{NUM}+         { yylval = atoi(yytext); return NUM; }
 {CHAR}         { return CHAR; }
 {ELSE}         { return ELSE; }
 {FALSE}        { return FALSE; }
